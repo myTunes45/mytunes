@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('myTunes')
+    .module('music')
     .controller('MusicController', function($scope, MusicService, $routeParams, $location) {
         MusicService.getPlaylist().success(function (playlist) {
           $scope.playlist = playlist;

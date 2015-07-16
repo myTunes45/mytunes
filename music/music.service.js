@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('myTunes')
+    .module('music')
     .factory('MusicService', function ($http, $rootScope) {
 
       var url = 'http://tiy-fee-rest.herokuapp.com/collections/myPlaylist';
