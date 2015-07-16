@@ -2,7 +2,9 @@
   "name": "MT",
   "version": "0.0.0",
   "authors": [
-    "Nathan Lodge <nathanlodge@icloud.com>"
+    "Nathan Lodge",
+    "Kelsey Pittner",
+    "Jamie Simper"
   ],
   "license": "MIT",
   "ignore": [
@@ -17,6 +19,7 @@
     "angular": "~1.4.3",
     "bootstrap": "~3.3.5",
     "fontawesome": "~4.3.0",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "angular-audio": "~1.7.0"
   }
 }
