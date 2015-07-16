@@ -1,0 +1,4 @@
+bower_components/
+.DS-Store
+.sass-cache
+.sass-cache/*
