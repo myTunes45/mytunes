@@ -2,9 +2,8 @@
   'use strict';
 
   angular
-    .module('music', [
-      'ngRoute',
-      'underscore'
+    .module('myTunes', [
+      'ngRoute'
     ])
 
     .config(function($routeProvider) {
