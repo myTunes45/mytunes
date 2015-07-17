@@ -1,0 +1,6 @@
+one:
+  title: "A Testy song"
+  duration: 320
+  url: "http://www.testy.com"
+  artist: "Test Artist"
+  genre: "Test Genre"
