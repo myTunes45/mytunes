@@ -1,0 +1,24 @@
+body {
+  background-color: lightgray; }
+
+.hud {
+  background-color: lightgray;
+  height: 100px; }
+
+.controls {
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 30px; }
+
+.fa-play {
+  margin-right: 10px;
+  margin-left: 10px; }
+
+.now-playing {
+  margin-top: 15px;
+  height: 70px; }
+
+.searchbar {
+  margin-top: 30px; }
+
+/*# sourceMappingURL=style.css.map */
