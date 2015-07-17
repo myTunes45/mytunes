@@ -30,12 +30,14 @@ class Api::SongsController < ApplicationController
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
-      render head: :no_content
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private
 
   def song_params
-    params.require(:song).permit(:title, :duration, :album, :url)
+    params.require(:song).permit(:title, :duration, :album, :url, :artist, :genre)
   end
 end

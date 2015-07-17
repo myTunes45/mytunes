@@ -2,5 +2,5 @@ one:
   title: "A Testy song"
   duration: 320
   url: "http://www.testy.com"
-  artist_id: 1
-  genre_id: 1
+  artist: "Test Artist"
+  genre: "Test Genre"

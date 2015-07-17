@@ -9,18 +9,6 @@ class SongTest < ActiveSupport::TestCase
     assert @song.valid?
   end
 
-  test "belongs to genre" do
-      assert_respond_to @song, :genre
-      @song.genre = genres(:one)
-      assert_instance_of Genre, @song.genre
-    end
-
-    test "belongs to artist" do
-      assert_respond_to @song, :artist
-      @song.artist = artists(:one)
-      assert @song.artist.instance_of?(Artist)
-    end
-
   test "title cannot be blank" do
     @song.title = nil
     refute @song.valid?
@@ -33,9 +21,15 @@ class SongTest < ActiveSupport::TestCase
     assert @song.errors.keys.include?(:url)
   end
 
-  test "duration must be a number" do
-    @song.duration = "120 seconds"
+  test "artist cannot be blank" do
+    @song.artist = nil
     refute @song.valid?
-    assert @song.errors.keys.include?(:duration)
+    assert @song.errors.keys.include?(:artist)
   end
+
+  # test "duration must be a number" do
+  #   @song.duration = "120 seconds"
+  #   refute @song.valid?
+  #   assert @song.errors.keys.include?(:duration)
+  # end
 end
