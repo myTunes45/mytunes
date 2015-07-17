@@ -12,6 +12,11 @@
           templateUrl: 'views/playlist.html',
           controller: 'MusicController'
         })
+        .when('/addFile', {
+          templateUrl: 'views/addFile.html',
+          controller: 'MusicController'
+        })
+
 
     });
 
