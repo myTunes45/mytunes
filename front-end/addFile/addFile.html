@@ -21,6 +21,7 @@
       <th>Title</th>
       <th>Album</th>
       <th>Genre</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -28,6 +29,7 @@
       <th>{{ song.title }}</th>
       <th>{{ song.album }}</th>
       <th>{{ song.genre }}</th>
+      <th><audio controls='controls'><source ng-src='{{ song.url }}'></audio></th>
     </tr>
   </tbody>
 </table>

@@ -10,7 +10,7 @@
 
 <body ng-app="myTunes">
 
-  <div class="container">
+  <div class="container player" ng-controller="addFileController">
       <div class="hud">
           <div class="hud-row row">
           <div class="col-sm-3 controls">
@@ -19,7 +19,6 @@
             <button class="btn"><span><i class="fa fa-forward"></i></span></button>
           </div>
           <div class="col-sm-6 now-playing well">
-            <marquee>Outkast | Spottieottiedopalicous Musik</marquee>
           </div>
           <div class="col-sm-3 searchbar">
             <div class="input-group">
@@ -29,7 +28,7 @@
           </div>
         </div>
       </div>
-      
+
   <ng-view></ng-view>
 
   <script src="bower_components/angular/angular.js"></script>
