@@ -3,21 +3,15 @@
 
   angular
     .module('myTunes', [
-      'ngRoute'
+      'ngRoute',
+      'addFile'
     ])
-
     .config(function($routeProvider) {
       $routeProvider
         .when('/', {
           templateUrl: 'views/playlist.html',
           controller: 'MusicController'
         })
-        .when('/addFile', {
-          templateUrl: 'views/addFile.html',
-          controller: 'MusicController'
-        })
-
-
     });
 
 })();
