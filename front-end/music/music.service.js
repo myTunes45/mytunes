@@ -11,7 +11,7 @@
         return $http.get(url);
       };
 
-      var getSong = function() {
+      var getSong = function(id) {
         return $http.get(url + '/' + id);
       };
 

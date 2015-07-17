@@ -21,6 +21,10 @@
           $location.path('/');
         };
 
+        $scope.playButton = function () {
+          $scope.audio1.playPause();
+        };
+
         var watchCallback = function () {
           MusicService.get().success(function (playlist) {
             $scope.playlist = playlist;
