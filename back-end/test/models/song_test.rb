@@ -27,9 +27,4 @@ class SongTest < ActiveSupport::TestCase
     assert @song.errors.keys.include?(:artist)
   end
 
-  test "duration must be a number" do
-    @song.duration = "120 seconds"
-    refute @song.valid?
-    assert @song.errors.keys.include?(:duration)
-  end
 end
