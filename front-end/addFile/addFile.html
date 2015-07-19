@@ -26,11 +26,7 @@
     </tr>
   </thead>
   <tbody ng-controller="addFileController">
-    <div class="input-group">
-      <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>
-      <input type="text" ng-model="search" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
-    </div>
-    <tr ng-repeat="song in songs | filter:search:strict" data-id="{{song.title}}" ng-model="search">
+    <tr ng-repeat="song in songs>
       <th ng-dblclick="showdelete=true">{{ song.title }}<button ng-if="showdelete==true" class="btn btn-danger" ng-click="deleteSong(song._id)">Delete</button></th>
       <th>{{ song.artist }}</th>
       <th>{{ song.album }}</th>
