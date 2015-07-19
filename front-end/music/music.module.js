@@ -7,7 +7,8 @@
       'myTunes',
       'addFile'
     ])
-    .config(function($routeProvider) {
+    .config(function($routeProvider, $sceProvider) {
+      $sceProvider.enabled(false);
       $routeProvider
         .when('/', {
           templateUrl: 'views/playlist.html',
