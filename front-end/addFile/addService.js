@@ -3,7 +3,7 @@
   angular
     .module('addFile')
     .factory('addService', ['$http', '$rootScope', function($http, $rootScope) {
-      var url = 'http://tiy-fee-rest.herokuapp.com/collections/myTunes1'
+      var url = 'https://shrouded-sierra-3476.herokuapp.com/api/songs'
 
       function addSong(song) {
         $http.post(url, song).then(function (res) {
@@ -16,7 +16,7 @@
         })
       };
       function deleteSong(id) {
-        return $http.delete(url + '/' + id).then(function(song){
+        return $http.delete(url + '/' + id + '.json').then(function(song){
           $rootScope.$broadcast('song:deleted');
         })
       }
