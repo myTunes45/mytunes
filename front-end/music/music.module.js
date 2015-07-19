@@ -4,6 +4,7 @@
   angular
     .module('myTunes', [
       'ngRoute',
+      'myTunes',
       'addFile'
     ])
     .config(function($routeProvider, $sceProvider) {
