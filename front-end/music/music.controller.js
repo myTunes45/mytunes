@@ -26,6 +26,8 @@
           $scope.audio1.playPause();
         };
 
+        $scope.search = '';
+
         var watchCallback = function () {
           MusicService.get().success(function (playlist) {
             $scope.playlist = playlist;
