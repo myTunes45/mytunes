@@ -5,7 +5,7 @@
     .module('myTunes')
     .factory('MusicService', function ($http, $rootScope) {
 
-      var url = 'https://shrouded-sierra-3476.herokuapp.com/api/songs';
+      var url = 'tiy-fee-rest.herokuapp.com/collections/mytunes1';
 
       var getPlaylist = function() {
         return $http.get(url);
