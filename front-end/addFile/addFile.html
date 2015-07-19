@@ -25,7 +25,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="song in songs">
+    <tr ng-repeat="song in songs" | filter:search:strict" data-id="{{song.title}}" ng-model="search">
       <th>{{ song.title }}</th>
       <th>{{ song.album }}</th>
       <th>{{ song.genre }}</th>
