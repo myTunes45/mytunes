@@ -49,7 +49,7 @@
           <th><button class="btn btn-success"  ng-click="setPlayer(song)"><i class="fa fa-play"></i></button><br><button ng-if="deleteBtn" class="btn btn-danger" ng-click="deleteSong(song.id)"><i class="fa fa-trash-o"></i></button></th>
           <th>{{ song.title }}</th>
           <th>{{ song.artist }}</th>
-          <th>{{ song.album }}</th>
+          <th class="hidden-xs">{{ song.album }}</th>
         </tr>
       </tbody>
     </table>
