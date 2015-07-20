@@ -1,53 +1,54 @@
-<div class="col-sm-12">
-  <div class="well">
-    <marquee>
-      <h2>{{player.title}}</h2>
-    </marquee>
+<div class="container">
+  <div class="col-sm-12 topbar">
+    <div class="well">
+      <marquee>
+        <span ng-if="player">{{player.title}} | {{player.artist}}</span>
+      </marquee>
+    </div>
+    <audio ng-src={{player.url}} controls='controls' autoplay>
+    </audio>
   </div>
-  <audio ng-src={{player.url}} controls='controls' autoplay>
-  </audio>
-</div>
 
-<div class="col-sm-12">
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span><span ng-click="add = !add" class="input-group-addon" id="basic-addon2"><i class="fa fa-plus"></i></span>
-  <input type="text" ng-model="search" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
-</div>
-
-<div ng-show="add" class="container song-form">
-
-  <div class="addForm col-sm-12">
-    <h2>Add a song</h2>
-    <form name="addSongForm">
-      <input type="text" placeholder="Artist" class="form-control" ng-model="song.artist">
-      <input type="text" placeholder="Url" class="form-control" ng-model="song.url">
-      <input type="text" placeholder="Title" class="form-control" ng-model="song.title">
-      <input type="text" placeholder="Album" class="form-control" ng-model="song.album">
-      <input type="text" placeholder="Genre" class="form-control" ng-model="song.genre">
-      <button ng-click="addSong(song)">Add Song</button>
-    </form>
+  <div class="col-sm-12">
+  <div class="searchbar input-group">
+    <span ng-click="add = !add" class="input-group-addon" id="basic-addon2"><i class="fa fa-plus"></i></span>
+    <input type="text" ng-model="search" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
   </div>
-</div>
 
-<table ng-hide="add" class="table table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Artist</th>
-      <th>Album</th>
-      <th>Genre</th>
-    </tr>
-  </thead>
+  <div ng-show="add" class="container song-form">
 
-  <tbody>
-    <tr ng-click="setPlayer(song)"ng-repeat="song in songs | filter:search:strict" data-id="{{song.url}}" ng-model="search">
-      <th><button class="btn btn-danger" ng-click="deleteSong(song.id)">X</button></th>
-      <th>{{ song.title }}</th>
-      <th>{{ song.artist }}</th>
-      <th>{{ song.album }}</th>
-      <th>{{ song.genre }}</th>
-    </tr>
-  </tbody>
-</table>
+    <div class="addForm col-sm-12">
+      <h2>Add a song</h2>
+        <input type="text" placeholder="Artist" class="form-control" ng-model="song.artist" required="required">
+        <input type="text" placeholder="Url" class="form-control" ng-model="song.url" required="required">
+        <input type="text" placeholder="Title" class="form-control" ng-model="song.title" required="required">
+        <input type="text" placeholder="Album" class="form-control" ng-model="song.album">
+        <input type="text" placeholder="Genre" class="form-control" ng-model="song.genre">
+        <button ng-click="addSong(song, input)">Add Song</button>
+    </div>
+  </div>
+  <div class="table-container">
+    <table ng-hide="add" class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Album</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="song in songs | filter:search:strict" data-id="{{song.url}}" ng-model="search" ng-dblclick="deleteBtn = !deleteBtn">
+          <th><button class="btn btn-success"  ng-click="setPlayer(song)"><i class="fa fa-play"></i></button></th>
+          <th>{{ song.title }}</th>
+          <th>{{ song.artist }}</th>
+          <th>{{ song.album }}<br><button ng-if="deleteBtn" class="btn btn-danger" ng-click="deleteSong(song.id)"><i class="fa fa-trash-o"></i></button></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  </div>
+
 </div>

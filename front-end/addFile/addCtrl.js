@@ -7,6 +7,7 @@
       $scope.addSong = function(song) {
           addService.addSong(song);
           $location.path('/myTunes');
+          $scope.song = '';
       };
       addService.getSongs().then(function (data) {
         $scope.songs = data;
@@ -17,6 +18,10 @@
       $scope.setPlayer = function(song) {
         $rootScope.player = song;
         console.log(song)
+      }
+
+      function resetInput() {
+        $scope.input = "";
       }
 
       function watchCallback() {

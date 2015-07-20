@@ -10,9 +10,7 @@
       $sceProvider.enabled(false);
       $routeProvider
         .when('/', {
-          redirectTo: '/myTunes',
-          templateUrl: 'views/playlist.html',
-          controller: 'MusicController'
+          redirectTo: '/myTunes'
         })
     });
 

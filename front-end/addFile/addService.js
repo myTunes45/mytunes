@@ -8,6 +8,7 @@
       function addSong(song) {
         $http.post(url, song).then(function (res) {
           $rootScope.$broadcast("song:added");
+          alert('Song Added!');
         });
       };
       function getSongs() {
