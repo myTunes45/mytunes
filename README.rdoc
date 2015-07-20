@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+myTunes does not resemble any music application in name or functionality. It is mostly unique.
 
-Things you may want to cover:
+Features:
 
-* Ruby version
+* Play a song.
 
-* System dependencies
+* Add a song to play.
 
-* Configuration
+* Delete a song!
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Adjust volume (louder or softer)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<tt>IT'S GREAT!</tt>.
