@@ -14,24 +14,20 @@
       });
       $scope.deleteSong = function(id) {
         addService.deleteSong(id);
-      }
+      };
       $scope.setPlayer = function(song) {
         $rootScope.player = song;
         console.log(song)
-      }
-
+      };
       function resetInput() {
         $scope.input = "";
       }
-
       function watchCallback() {
         addService.getSongs().then(function(songs) {
           $scope.songs = songs
         });
       }
-
       $scope.$on('song:added', watchCallback);
-      $scope.$on('song:deleted', watchCallback);
-
+      $scope.$on('song:deleted', watchCallback);  
     }]);
 }());
