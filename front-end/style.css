@@ -2,7 +2,10 @@ body {
   background-color: lightgray; }
 
 .container {
-  max-width: 690px; }
+  max-width: 690px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-top: 20px; }
 
 .hud {
   background-color: lightgray;
@@ -36,7 +39,18 @@ audio {
   margin-bottom: 20px; }
 
 .table-container {
-  height: 680px;
+  height: 600px;
   overflow: auto; }
+
+.input-group {
+  margin: 0 auto;
+  padding-top: 5px; }
+
+.addSongBtn {
+  display: block;
+  margin: 10px auto; }
+
+form {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

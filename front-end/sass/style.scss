@@ -4,6 +4,9 @@ body {
 
 .container {
   max-width: 690px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-top: 20px;
 }
 
 .hud {
@@ -18,6 +21,7 @@ body {
 .well {
   margin-bottom: 0;
 }
+
 .controls  {
   text-align: center;
   font-size: 1.4em;
@@ -26,25 +30,34 @@ body {
 
 .fa-play {
   margin-right: 10px;
-  margin-left: 10px;
-}
+  margin-left: 10px; }
 
 .now-playing {
   margin-top: 15px;
-  height: 70px;
-}
+  height: 70px; }
 
 .searchbar {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 audio {
   width: 100%;
   margin-top: 20px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .table-container {
-  height: 680px;
-  overflow: auto;
+  height: 600px;
+  overflow: auto; }
+
+.input-group {
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.addSongBtn {
+  display: block;
+  margin: 10px auto;
+}
+
+form {
+  text-align: center;
 }
