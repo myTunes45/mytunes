@@ -2,17 +2,21 @@
   'use strict';
   angular
     .module('addFile')
-    .controller('addFileController', ['$scope','addService', '$location', '$routeParams',
-    function($scope, addService, $location, $routeParams) {
+    .controller('addFileController', ['$rootScope','$scope','addService', '$location', '$routeParams',
+    function($rootScope, $scope, addService, $location, $routeParams) {
       $scope.addSong = function(song) {
           addService.addSong(song);
-          $location.path('/addFile');
+          $location.path('/myTunes');
       };
       addService.getSongs().then(function (data) {
         $scope.songs = data;
       });
       $scope.deleteSong = function(id) {
         addService.deleteSong(id);
+      }
+      $scope.setPlayer = function(song) {
+        $rootScope.player = song;
+        console.log(song)
       }
 
       function watchCallback() {

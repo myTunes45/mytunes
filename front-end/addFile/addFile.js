@@ -7,7 +7,7 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
-      .when('/addFile', {
+      .when('/myTunes', {
         templateUrl: 'addFile/addFile.html',
         controller: 'addFileController'
       });

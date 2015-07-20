@@ -21,4 +21,8 @@ body {
 .searchbar {
   margin-top: 30px; }
 
+audio {
+  width: 100%;
+  height: 50px; }
+
 /*# sourceMappingURL=style.css.map */
