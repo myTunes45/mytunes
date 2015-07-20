@@ -1,9 +1,18 @@
 body {
   background-color: lightgray; }
 
+.container {
+  max-width: 690px; }
+
 .hud {
   background-color: lightgray;
   min-height: 100px; }
+
+.topbar {
+  padding-top: 10px; }
+
+.well {
+  margin-bottom: 0; }
 
 .controls {
   text-align: center;
@@ -19,6 +28,15 @@ body {
   height: 70px; }
 
 .searchbar {
-  margin-top: 30px; }
+  margin-bottom: 20px; }
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.table-container {
+  height: 680px;
+  overflow: auto; }
 
 /*# sourceMappingURL=style.css.map */
